@@ -17,9 +17,13 @@ const cars = (state = [], action) => {
 
 const makes = (state = [], action) => {
     switch(action.type) {
+        case 'FETCH_MAKES':
+            return action.value
         default:
             return state
     }
 }
+
+
 
 export default combineReducers({ user, cars, makes })
